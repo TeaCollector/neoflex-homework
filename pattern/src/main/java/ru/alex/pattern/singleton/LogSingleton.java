@@ -7,7 +7,8 @@ public class LogSingleton {
 
     private static volatile LogSingleton instance;
 
-    private LogSingleton() {}
+    private LogSingleton() {
+    }
 
     public static LogSingleton getInstance() {
         if (instance == null) {
@@ -16,7 +17,8 @@ public class LogSingleton {
                     instance = new LogSingleton();
                 }
             }
-        } return instance;
+        }
+        return instance;
     }
 
     public void classLog(Object object, String info) {
